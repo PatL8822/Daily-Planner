@@ -19,18 +19,29 @@ const el2 = document.getElementById('el2');
 const el3 = document.getElementById('el3');
 const h1El = document.getElementById('h1');
 const bodyEl = document.getElementById('body');
-const svBtn = document.querySelector('#svBtn');
+const svBtn1 = document.querySelector('#svBtn');
 const eventEl = document.querySelector('#event');
+
 
 
 btnEl.addEventListener('click', planner);
 
 //Adding to local storage
-svBtn.addEventListener('click', ()=>{
+svBtn1.addEventListener('click', ()=>{
     localStorage.setItem('Event', eventEl.value);
 });
 
-// function planner adds classes to elements to make them gidden and reapper after the button is clicked then calls function upDateTime
+
+
+
+function genRows(currentTime, rowIndex){
+    var row = $('<div></div>');
+        row.addClass('row');
+}
+
+
+// function planner adds classes to elements to make them hidden and reapper after the button is clicked then calls function upDateTime
+// rename
 function planner() {
     el1.classList.remove('hide');
     el2.classList.add('hide');

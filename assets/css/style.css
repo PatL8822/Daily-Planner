@@ -48,6 +48,11 @@ textarea {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .hour {

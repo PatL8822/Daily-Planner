@@ -32,7 +32,9 @@ SOFTWARE.
 
 
 ## Screen Shot
+![Screenshot (7)](https://user-images.githubusercontent.com/110148234/191184471-b5f1be1f-31e4-40ad-b91f-bed87fdf70a3.png)
 
 
 
 ## Link to work
+https://patl8822.github.io/Daily-Planner/

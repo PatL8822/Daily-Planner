@@ -15,20 +15,37 @@
   <title>Work Day Scheduler</title>
 </head>
 
-<body class="colorOne">
+<body id="body" class="colorOne">
   <header id="el1" class="jumbotron hide">
-    <h1 id="el2" class="display-3 hide">Work Day Scheduler</h1>
-    <p id="e3" class="lead hide">A simple calendar app for scheduling your work day</p>
-    <p id="currentDay" class="lead hide"></p>
-  </header>
-  <!-- <section id='open' class="cover">
-  <p class="font bold">~ Daily Schedule ~</p>
-  <button class="font btn">Click to Open</button>
-  </section> -->
-  <div id="el4" class="container hide">
-    <!-- Timeblocks go here -->
+    <div class="colorTwo">
+    <h1 id="h1" class="display-3 font">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
   </div>
+  </header>
+  <section id="el2">
+    <div class="cover">
+      <p class="font bold">~ Daily Schedule ~</p>
+      <button id='open' class="font btn">Click to Open</button>
+    </div>
+  </section>
+  <div id="el3" class="container hide">
+    <!-- Timeblocks go here -->
 
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+         7AM
+        </div>
+        <div class="col-sm"><input id="event" type="text" placeholder="Whats Happening?"/>
+        </div>
+        <div class="col-sm">
+          <button id="svBtn" class="saveBtn">Save</button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </body>

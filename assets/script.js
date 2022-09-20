@@ -13,34 +13,45 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist*/
 
-const openEl = document.getElementById('open');
+const btnEl = document.getElementById('open');
 const el1 = document.getElementById('el1');
 const el2 = document.getElementById('el2');
-const el3 = document.getElementById('e3');
-const currentDay = document.getElementsByClassName('lead');
-const el4 = document.getElementById('el4');
-// openEl.addEventListener('click', planner);
+const el3 = document.getElementById('el3');
+const h1El = document.getElementById('h1');
+const bodyEl = document.getElementById('body');
+const svBtn = document.querySelector('#svBtn');
+const eventEl = document.querySelector('#event');
 
-// function planner(){
-//     openEl.classList.add('hide');
-//     el1.classList.remove('hide');
-//     el2.classList.remove('hide');
-//     el3.classList.remove('hide');
-//     el1.currentDay.remove('hide');
-//     el4.classList.remove('hide');
-//     upDateTime()
-// }
 
-//this portion of the time format sets time instantly on the page
-const time = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
-$("#currentDay").text(time);
+btnEl.addEventListener('click', planner);
 
-function upDateTime(){
-const time = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
-$("#currentDay").text(time);
+//Adding to local storage
+svBtn.addEventListener('click', ()=>{
+    localStorage.setItem('Event', eventEl.value);
+});
+
+// function planner adds classes to elements to make them gidden and reapper after the button is clicked then calls function upDateTime
+function planner() {
+    el1.classList.remove('hide');
+    el2.classList.add('hide');
+    el3.classList.remove('hide');
+    bodyEl.classList.remove('colorOne')
+    upDateTime()
 }
-// the interval recalss the function upDateTime every second keepingthe time current.
-setInterval(upDateTime,1000);
+
+//the const hard sets the current date immediately after the button is clicked.
+const time = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+$("#currentDay").text(time);
+
+// setting date in function helps to recall current time in setInterval.
+function upDateTime() {
+    const time = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+    $("#currentDay").text(time);
+}
+// putting the function upDateTime in setInterval keeps the time current by the second
+setInterval(upDateTime, 1000);
+
+
 
 
 
